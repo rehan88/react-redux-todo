@@ -1,8 +1,6 @@
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      window.console.log(action);
-      window.console.log([state]);
       return [
         ...state,
         {
