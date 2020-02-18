@@ -1,6 +1,8 @@
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
+      window.console.log(action);
+      window.console.log([state]);
       return [
         ...state,
         {
@@ -10,16 +12,11 @@ const todos = (state = [], action) => {
         }
       ]
     case 'TOGGLE_TODO':
-      return state.map(todo =>
-        (todo.id === action.id)
-          ? {...todo, completed: !todo.completed}
-          : todo
-      )
+      return state.map(todo => (todo.id === action.id) ? {...todo, completed: !todo.completed} : todo)
     case 'REMOVE_TODO':
-      var tasks = [...state];
-      var task = tasks.filter(t => t.id === action.id);
-      var index = tasks.indexOf(task[0]);
-      tasks.splice(index, 1);            
+      var tasks = [...state];      
+      var task = tasks.filter(t => t.id === action.id);      
+      tasks.splice(tasks.indexOf(task[0]), 1);      
       return tasks;      
     default:
       return state

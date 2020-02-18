@@ -1,15 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import RemoveToDo from './RemoveToDo'
 
 const Todo = ({ onClick, completed, text, removeTodo }) => (  
-  <li
-    onClick={onClick}
-    style={{ textDecoration: completed ? 'line-through' : 'none' }}
-  >
+  <li style={{ textDecoration: completed ? 'line-through' : 'none' }} >
     {text}    
-      <div>
-        <RemoveToDo onClick={removeTodo} /> 
+      <div>        
+        <button onClick={removeTodo}> Remove </button>
+        <button onClick={onClick}> Complete </button>
       </div>
   </li>
 )
