@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import todos from './todos'
 import visibilityFilter from './visibilityFilter'
-import quotes from './quotes'
+import quote from './quote'
 
 export default combineReducers({
   todos,
   visibilityFilter,
-  quotes
+  quote
 })

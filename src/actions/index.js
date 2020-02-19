@@ -20,10 +20,6 @@ export const removeTodo = id => ({
   id
 })
 
-export const getQuoteOfTheDay = () => ({
-  type: 'GET_QUOTE_OF_THE_DAY',
-})
-
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_COMPLETED: 'SHOW_COMPLETED',

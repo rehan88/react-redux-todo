@@ -8,9 +8,9 @@ import DisplayQuote from '../containers/DisplayQuote'
 const App = () => (
   <div>
     <Header/>
-    <DisplayQuote/>
+    <DisplayQuote />
       <AddTodo />
-        <VisibleTodoList />      
+      <VisibleTodoList />      
     <Footer />
   </div>
 )
